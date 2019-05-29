@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:tag="wall_frag"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/postre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:paddingLeft="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_user"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="What's on your mind?"
+                    android:textColorHint="@color/black"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:clickable="true"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+            <TableRow
+                android:id="@+id/status_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/lin1"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentTop="false"
+                android:background="@drawable/wall_post_background">
+
+                <include
+                    android:id="@+id/btnphotos"
+                    layout="@layout/button_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#a1a1a1" />
+
+                <include
+                    android:id="@+id/btncamera"
+                    layout="@layout/button_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:padding="5dp"
+            android:layout_below="@id/postre"
+            android:id="@+id/recyhome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+    </RelativeLayout>
+</RelativeLayout>

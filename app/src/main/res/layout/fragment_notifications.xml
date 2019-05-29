@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:paddingStart="2dp"
+        android:paddingTop="5dp"
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp"
+            android:paddingTop="3dp"
+            android:hint="Write something"
+            android:background="@drawable/roundededittext"
+            android:padding="5dp"
+            />
+        <LinearLayout
+            android:id="@+id/choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="true">
+            <Button
+                android:id="@+id/buttonCreateFolder"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Create Folder"
+                android:background="@drawable/roundedcorner"
+                android:textColor="@color/textColor"
+                android:padding="2dp"
+                android:layout_weight="1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:background="#a1a1a1" />
+            <Button
+                android:id="@+id/buttonUploadString"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedcorner"
+                android:textColor="@color/textColor"
+                android:padding="2dp"
+                android:text="Upload String"
+                android:layout_weight="1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:background="#a1a1a1" />
+            <Button
+                android:id="@+id/buttonListFolders"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="List Folder"
+                android:padding="2dp"
+                android:background="@drawable/roundedcorner"
+                android:textColor="@color/textColor"
+                android:layout_weight="1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:background="#a1a1a1" />
+            <Button
+                android:id="@+id/buttonAddFriend"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Add Friend"
+                android:padding="2dp"
+                android:background="@drawable/roundedcorner"
+                android:textColor="@color/textColor"
+                android:layout_weight="1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:background="#a1a1a1" />
+            <Button
+                android:id="@+id/buttonShareFolder"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Share Folder"
+                android:background="@drawable/roundedcorner"
+                android:textColor="@color/textColor"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout"/>
+</RelativeLayout>
